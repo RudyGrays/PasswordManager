@@ -30,6 +30,8 @@ export const fakeRequest = async (PassService: PassServiceDTO) => {
           password,
           service,
         });
+        localStorage.setItem("id", String(id));
+        ++id;
       } else {
         rej(PasswordServiceError.SERVER_ERROR);
       }
