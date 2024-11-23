@@ -22,7 +22,7 @@ const PasswordService = () => {
     const filtered = items.filter((item) =>
       item.service.toLowerCase().includes(value.toLowerCase())
     );
-    setFilteredItems(filtered);
+    setFilteredItems(filtered.toReversed());
   });
 
   const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
