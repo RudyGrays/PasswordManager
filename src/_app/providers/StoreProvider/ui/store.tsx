@@ -1,12 +1,10 @@
 import {
   Action,
-  AnyAction,
   combineReducers,
   configureStore,
-  ReducersMapObject,
   ThunkDispatch,
 } from "@reduxjs/toolkit";
-import { StateSchema } from "../config/StateSchema";
+
 import { PassServiceReducer } from "@/entities/PasswordService/model/slice/slice";
 import createWebStorage from "redux-persist/lib/storage/createWebStorage";
 
@@ -19,20 +17,21 @@ import {
   PERSIST,
   PURGE,
   REGISTER,
-  WebStorage,
-  Storage,
 } from "redux-persist";
 import { useDispatch } from "react-redux";
 
 const createNoopStorage = () => {
   return {
     getItem(_key: any) {
+      _key;
       return Promise.resolve(null);
     },
     setItem(_key: any, value: any) {
+      _key;
       return Promise.resolve(value);
     },
     removeItem(_key: any) {
+      _key;
       return Promise.resolve();
     },
   };

@@ -61,5 +61,5 @@ const PasswordServiceModal: FC<PasswordServiceModalProps> = memo(
     );
   }
 );
-
+PasswordServiceModal.displayName = "PasswordServiceModal";
 export { PasswordServiceModal };

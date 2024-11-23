@@ -14,7 +14,7 @@ const isBrowser = typeof window !== "undefined";
 
 let id = 1;
 
-let lsId = isBrowser ? localStorage.getItem("id") : 0;
+const lsId = isBrowser ? localStorage.getItem("id") : 0;
 
 if (lsId) {
   id = +lsId + 1;
